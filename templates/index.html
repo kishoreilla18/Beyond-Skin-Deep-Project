@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BEYOND SKIN DEEP</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="/static/css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!-- Custom Style CSS -->
+    <link
+      href="/static/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- FlexSlider CSS -->
+    <link
+      rel="stylesheet"
+      href="/static/css/flexslider.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <!-- jQuery and Modernizr -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/modernizr.custom.js"></script>
+
+    <!-- Hide URL bar for mobile devices -->
+    <script type="application/x-javascript">
+      addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+      }, false);
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Header and Banner -->
+    <div class="banner">
+      <div class="container">
+        <div class="header">
+          <div class="head-nav">
+            <span class="menu"> </span>
+            <ul class="cl-effect-1">
+              <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/admin">Admin</a></li>
+              <li><a href="/contact">Patient</a></li>
+              <li><a href="/doctor">Doctor</a></li>
+              <div class="clearfix"></div>
+            </ul>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+        <!-- Navigation script -->
+        <script>
+          $("span.menu").click(function () {
+            $(".head-nav ul").slideToggle(300);
+          });
+        </script>
+      </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="welcome" style="margin-top: 0%;">
+      <div class="container">
+        <div class="col-md-6 welcome-left">
+          <h1>BEYOND SKIN DEEP</h1>
+          <h2>ABSTRACT!</h2>
+          <h5><b>AI-based tool For Preliminary Diagnosis Of Dermatological Manifestations</b></h5>
+          <p>
+            The increasing prevalence of skin diseases and the shortage of dermatologists in many regions necessitate the development of innovative solutions to assist in the preliminary diagnosis of dermatological conditions. We present an AI-based tool designed to serve as an aid for patients, general practitioners, and dermatologists.
+            This system leverages Convolutional Neural Networks (CNN) and MobileNet architecture for the analysis of skin image datasets, providing a platform for the preliminary diagnosis of skin diseases. 
+            <br /><br />
+            Upon registration, users can access different functionalities based on their role: admin/owner, patient, or doctor. The admin can train the model with a skin image dataset, view registered users, and receive feedback. Patients can log in, upload skin images, and provide additional information such as age, gender, and duration of the condition. The system classifies the disease, provides a description, suggests remedies, assesses disease severity, and recommends dermatologists. Patients can book appointments and view their past disease history.
+          </p>
+        </div>
+
+        <!-- FlexSlider Section -->
+        <div class="col-md-6 welcome-right">
+          <section class="slider">
+            <div class="flexslider">
+              <ul class="slides">
+                <li>
+                  <img src="/static/images/c3.jpg" class="img-responsive carousel-img" alt="Skin Lesion Example 1" />
+                  <div class="carousel-caption">AI-powered skin lesion analysis</div>
+                </li>
+                <li>
+                  <img src="/static/images/c1.jpg" class="img-responsive carousel-img" alt="Skin Lesion Example 2" />
+                  <div class="carousel-caption">Upload your skin image for instant results</div>
+                </li>
+                <li>
+                  <img src="/static/images/c2.jpg" class="img-responsive carousel-img" alt="Skin Lesion Example 3" />
+                  <div class="carousel-caption">Book appointments with dermatologists</div>
+                </li>
+                <li>
+                  <img src="/static/images/8.jpg" class="img-responsive carousel-img" alt="Model Accuracy" />
+                  <div class="carousel-caption">High accuracy with deep learning</div>
+                </li>
+                <li>
+                  <img src="/static/images/6.jpg" class="img-responsive carousel-img" alt="CNN Confusion Matrix" />
+                  <div class="carousel-caption">CNN model confusion matrix</div>
+                </li>
+                <li>
+                  <img src="/static/images/c3.jpg" class="img-responsive carousel-img" alt="Dermatology Crop" />
+                  <div class="carousel-caption">Dermatology image preprocessing</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+    <!-- FlexSlider JavaScript -->
+    <script defer src="/static/js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+      $(window).load(function () {
+        $(".flexslider").flexslider({
+          animation: "fade",
+          pauseOnHover: true,
+          start: function (slider) {
+            $("body").removeClass("loading");
+          },
+        });
+      });
+    </script>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <p>
+          © 2024 All rights reserved | Design by
+          <a href="#">Dermatology Centre</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
